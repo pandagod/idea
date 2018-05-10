@@ -1,4 +1,4 @@
-import MySQLdb
+import mysql.connector
 import random
 import pickle
 import os
@@ -62,7 +62,7 @@ def build_ngrams_model():
     return model
 
 def load_data_from_db():
-    cnx = MySQLdb.connect(host="10.249.71.213", user="root", password="root", database="ai")
+    cnx = mysql.connector.connect(host="10.249.71.213", user="root", password="root", database="ai")
     cursor = cnx.cursor()
 
     sql = ("select sr_number,inbound_subject_0,inbound_body_0,outbound_subject_0,outbound_body_0 "
