@@ -49,7 +49,7 @@ def build_ngrams_model():
                     Corpus.append(sent.text)
 
         except Exception:
-            print 'str(Exception):\t', str(Exception)
+            print (str(Exception))
             print(row[0])
 
     model = CountVectorizer(tokenizer=util.CustomizeTokenizer(nlp), ngram_range=(3, 3), min_df=5,
