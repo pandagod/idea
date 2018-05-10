@@ -48,8 +48,8 @@ def build_ngrams_model():
                 for sent in nlp(outbound_body).sents:
                     Corpus.append(sent.text)
 
-        except Exception, e:
-            print 'str(Exception):\t', str(e)
+        except Exception:
+            print 'str(Exception):\t', str(Exception)
             print(row[0])
 
     model = CountVectorizer(tokenizer=util.CustomizeTokenizer(nlp), ngram_range=(3, 3), min_df=5,
