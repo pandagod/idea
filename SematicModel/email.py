@@ -98,7 +98,7 @@ def load_data(ngrams_model):
                 DataSet.append((x, y))
 
         except Exception, e:
-            print 'str(Exception):\t', str(e)
+            print (str(e))
             print(row[0])
 
     return DataSet
