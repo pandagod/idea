@@ -97,8 +97,8 @@ def load_data(ngrams_model):
                 y = convertSparseToIds(ngrams_model.transform([util.clean_str(outbound_body)]).toarray())
                 DataSet.append((x, y))
 
-        except Exception, e:
-            print (str(e))
+        except Exception:
+            print (str(Exception))
             print(row[0])
 
     return DataSet
