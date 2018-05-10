@@ -72,9 +72,9 @@ def load_data_from_db():
     try:
         cursor.execute(sql)
         results = cursor.fetchall()
-        print results
-    except Exception, e:
-        print 'str(e):\t\t', str(e)
+        print(results)
+    except Exception:
+        print(str(Exception))
 
     cursor.close()
     cnx.close()
