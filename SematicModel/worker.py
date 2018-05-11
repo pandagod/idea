@@ -7,7 +7,7 @@ import dot_product_similarity_model
 import importlib
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--task', default='email', choices=['email'])
+parser.add_argument('--task', default='emailtask', choices=['emailtask'])
 parser.add_argument('--model', default='dot-product', choices=['dot-product','jointly'])
 parser.add_argument('--mode', default='train', choices=['train', 'eval'])
 parser.add_argument('--checkpoint-frequency', type=int, default=100)
